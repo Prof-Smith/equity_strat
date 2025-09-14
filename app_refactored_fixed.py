@@ -28,15 +28,13 @@ tab1, tab2, tab3, tab4 = st.tabs(["Alpha", "Active Share", "Sharpe Ratio", "Annu
 with tab1:
     st.subheader("Alpha (%)")
     st.markdown("""
-    **Formula:** \( lpha = R_p - R_b \)  
     **Explanation:** Measures the excess return of a portfolio over the benchmark. Positive alpha indicates outperformance.
     """)
     st.plotly_chart(create_chart("Alpha"), use_container_width=True)
 
 with tab2:
     st.subheader("Active Share (%)")
-    st.markdown("""
-    **Formula:** \( 	ext{Active Share} = rac{1}{2} \\sum |w_{p,i} - w_{b,i}| \)  
+    st.markdown(""" 
     **Explanation:** Indicates how much the portfolio holdings differ from the benchmark. Higher values suggest more active management.
     """)
     st.plotly_chart(create_chart("Active Share"), use_container_width=True)
@@ -44,7 +42,6 @@ with tab2:
 with tab3:
     st.subheader("Sharpe Ratio (%)")
     st.markdown("""
-    **Formula:** \( 	ext{Sharpe Ratio} = rac{R_p - R_f}{\\sigma_p} \)  
     **Explanation:** Measures risk-adjusted return. Higher values indicate better performance per unit of risk.
     """)
     st.plotly_chart(create_chart("Sharpe Ratio"), use_container_width=True)
@@ -52,7 +49,6 @@ with tab3:
 with tab4:
     st.subheader("Annualized Return (%)")
     st.markdown("""
-    **Formula:** \( 	ext{Annualized Return} = (1 + R_m)^{12} - 1 \)  
     **Explanation:** Converts monthly return to yearly compounded return.
     """)
     st.plotly_chart(create_chart("Annualized Return"), use_container_width=True)
